@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Request information about Phoenix heat safety resources.">
+  <title>Request Information | Phoenix Heat Safety & Resources</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="navigation.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-name">Phoenix Heat Safety & Resources</p>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="heat-safety.html">Heat Safety</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="request.html" aria-current="page">Request Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Request Heat Safety Information</h1>
+    <p>
+      Use this demonstration form to practice requesting
+      information about Phoenix heat safety resources.
+      No information is sent or stored.
+    </p>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Information Request Form</h2>
+
+      <form id="request-form">
+        <div class="form-field">
+          <label for="full-name">Full Name (required)</label>
+          <input type="text" id="full-name" name="full-name"
+                 autocomplete="name" required>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email Address (required)</label>
+          <input type="email" id="email" name="email"
+                 autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <label for="topic">Information Topic (required)</label>
+          <select id="topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option value="heat-safety">Heat Safety</option>
+            <option value="cooling">Cooling Resources</option>
+            <option value="hydration">Hydration Resources</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Preferred Information Format</legend>
+
+          <label>
+            <input type="radio" name="format" value="email" checked>
+            Email Summary
+          </label>
+
+          <label>
+            <input type="radio" name="format" value="website">
+            Website Resources
+          </label>
+        </fieldset>
+
+        <button type="submit">Review Request</button>
+      </form>
+
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Educational capstone project. Not an official City of Phoenix website.</p>
+  </footer>
+</body>
+</html>
