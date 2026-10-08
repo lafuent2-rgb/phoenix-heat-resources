@@ -13,20 +13,54 @@
         <main>
             <section>
                 <h2>1. Project and URLs</h2>
+
                 <dl>
-                    <dt>Project, audience, and purpose</dt>
-                    <dd>[Two or three sentences]</dd>
-                    <dt>Priority tasks</dt>
-                    <dd>[Two or three tasks]</dd>
-                    <dt>Pages</dt>
-                    <dd>[Three or four page names]</dd>
-                    <dt>Repository</dt>
-                    <dd>[URL]</dd>
-                    <dt>Published site</dt>
-                    <dd>[URL]</dd>
-                    <dt>Code defense</dt>
-                    <dd>[URL or live-defense statement]</dd>
+                <dt>Project, audience, and purpose</dt>
+                <dd>
+                    Phoenix Heat Safety & Resources is an educational
+                    website for Phoenix residents seeking information
+                    about extreme heat. Its purpose is to explain heat
+                    safety, identify community resources, and provide
+                    a demonstration information request form.
+                </dd>
+
+                <dt>Priority tasks</dt>
+                <dd>
+                    Learn heat safety practices, explore cooling and
+                    hydration resources, and review an information
+                    request using the demonstration form.
+                </dd>
+
+                <dt>Pages</dt>
+                <dd>
+                    Home, Heat Safety, Resources, and Request Information.
+                </dd>
+
+
+                <dt>Repository</dt>
+                <dd>
+                <a href="https://github.com/lafuent2-rgb/phoenix-heat-resources">
+                    https://github.com/lafuent2-rgb/phoenix-heat-resources
+                </a>
+                </dd>
+
+
+
+                <dt>Published site</dt>
+                <dd>
+                <a href="https://lafuent2-rgb.github.io/phoenix-heat-resources/">
+                    https://lafuent2-rgb.github.io/phoenix-heat-resources/
+                </a>
+                </dd>
+
+
+                <dt>Code defense</dt>
+                <dd>
+                    Code defense will be completed independently
+                    for the final capstone deliverable.
+                </dd>
                 </dl>
+
             </section>
             <section>
                 <h2>2. Concise Requirement Map</h2>
@@ -39,28 +73,113 @@
                             <th>Reuse decision</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
-                        <tr>
-                            <td>[Course component]</td>
-                            <td>[Page/component/file]</td>
-                            <td>[Why it belongs]</td>
-                            <td>[Adapt, refactor, replace, omit, or new]</td>
-                        </tr>
+                    <tr>
+                        <td>Semantic HTML structure</td>
+                        <td>All four HTML pages</td>
+                        <td>Organizes headings, navigation, and main content.</td>
+                        <td>Adapted from previous assignments.</td>
+                    </tr>
+                    <tr>
+                        <td>Shared design system</td>
+                        <td>styles.css</td>
+                        <td>Provides reusable colors, spacing, and typography.</td>
+                        <td>Adapted and refactored.</td>
+                    </tr>
+                    <tr>
+                        <td>Figure and data table</td>
+                        <td>heat-safety.html</td>
+                        <td>Explains heat safety steps and illness warning signs.</td>
+                        <td>New.</td>
+                    </tr>
+                    <tr>
+                        <td>Accessible form</td>
+                        <td>request.html and navigation.js</td>
+                        <td>Demonstrates validation, feedback, and error recovery.</td>
+                        <td>Adapted from the form assignment.</td>
+                    </tr>
+                    <tr>
+                        <td>Original SVG</td>
+                        <td>heat-resources.svg and resources.html</td>
+                        <td>Illustrates water, shade, and cooling resources.</td>
+                        <td>New.</td>
+                    </tr>
+                    <tr>
+                        <td>Responsive navigation and layout</td>
+                        <td>All pages and styles.css</td>
+                        <td>Supports navigation and content at narrow widths.</td>
+                        <td>Adapted from navigation assignments.</td>
+                    </tr>
+                    <tr>
+                        <td>Positioning and layering</td>
+                        <td>index.html and styles.css</td>
+                        <td>Anchors the reminder badge inside the hero section.</td>
+                        <td>Adapted from positioning practice.</td>
+                    </tr>
+                    <tr>
+                        <td>Shape and motion</td>
+                        <td>styles.css</td>
+                        <td>Adds a decorative shape and reduced-motion support.</td>
+                        <td>Adapted from CSS effects practice.</td>
+                    </tr>
+                    <tr>
+                        <td>Testing and documentation</td>
+                        <td>capstone-evidence.html and evidence-images</td>
+                        <td>Records test results, findings, repairs, and screenshots.</td>
+                        <td>New capstone documentation.</td>
+                    </tr>
                     </tbody>
+
                 </table>
                 <p>Add enough rows to locate semantic structure, the design system, figure, table, form, SVG, navigation/layout, positioning/layering, shape, effect/motion, testing, and documentation.</p>
             </section>
             <section>
                 <h2>3. Focused Release Check</h2>
+
                 <ul>
-                    <li>HTML and CSS validation: [result]</li>
-                    <li>Published links and assets: [result]</li>
-                    <li>320 CSS pixels and 200% zoom: [result]</li>
-                    <li>Keyboard and visible focus: [result]</li>
-                    <li>Form labels, constraints, errors, and recovery: [result]</li>
-                    <li>Reduced motion and JavaScript unavailable: [result]</li>
-                    <li>Two current browsers: [result]</li>
+
+                <li>
+                HTML and CSS validation: Passed. All five HTML files
+                were checked using the W3C HTML Validator, and both
+                CSS files passed the W3C CSS Validator.
+                </li>
+
+
+                <li>
+                Published links and assets: GitHub Pages is published.
+                All four pages are accessible through the website
+                navigation. The SVG, CSS, and JavaScript assets
+                were checked locally.
+                </li>
+
+                <li>
+                    320 CSS pixels and 200% zoom: Passed. Content remained
+                    readable, navigation worked, and no page-level
+                    horizontal overflow was observed.
+                </li>
+                <li>
+                    Keyboard and visible focus: Passed. Navigation links
+                    and form controls were accessible using the keyboard.
+                    Focus indicators remained visible.
+                </li>
+                <li>
+                    Form labels, constraints, errors, and recovery:
+                    Passed. Required fields and email validation worked,
+                    and valid submissions displayed demonstration feedback.
+                </li>
+                <li>
+                    Reduced motion and JavaScript unavailable: Passed
+                    after repair. Card movement was removed under reduced
+                    motion. Without JavaScript, a notice appeared and
+                    the Review Request button was disabled.
+                </li>
+                <li>
+                    Two current browsers: Passed in Google Chrome and
+                    Microsoft Edge. All four pages were checked.
+                </li>
                 </ul>
+
             </section>
             <section>
                 <h2>4. Three Findings and Repairs</h2>
@@ -73,26 +192,142 @@
                             <th>Exact retest and result</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>[What happened and under which condition]</td>
-                            <td>[Affected content, task, or user]</td>
-                            <td>[What changed]</td>
-                            <td>[Repeated condition and observed result]</td>
-                        </tr>
-                    </tbody>
+                    
+                <tbody>
+                <tr>
+                    <td>
+                    Finding 1: With JavaScript disabled, submitting
+                    a valid form reloaded the page without confirmation.
+                    </td>
+                    <td>
+                    Users could mistakenly believe their information
+                    request had been submitted.
+                    </td>
+                    <td>
+                    Added a no-JavaScript notice, disabled the submit
+                    button by default, and used JavaScript to enable it.
+                    Added a gray visual style for the disabled state.
+                    </td>
+                    <td>
+                    Disabled JavaScript and refreshed request.html.
+                    The notice appeared and the button remained disabled.
+                    Re-enabled JavaScript and refreshed. The button worked
+                    and displayed the demonstration confirmation. Passed.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    Finding 2: At 320 CSS pixels, the three-column
+                    heat illness table required horizontal scrolling.
+                    </td>
+                    <td>
+                    Narrow-screen users must scroll within the table
+                    to read all columns.
+                    </td>
+                    <td>
+                    No repair required. The existing table-wrapper
+                    provides contained horizontal scrolling.
+                    </td>
+                    <td>
+                    Tested heat-safety.html again at 320px.
+                    All columns were accessible within the table,
+                    with no page-level horizontal overflow. Passed.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    Finding 3: At 200% browser zoom, the homepage
+                    navigation and cards needed to adapt to reduced
+                    available space.
+                    </td>
+                    <td>
+                    Increased zoom can reduce the space available
+                    for navigation and content.
+                    </td>
+                    <td>
+                    No repair required. The existing flexible
+                    navigation and responsive card grid were sufficient.
+                    </td>
+                    <td>
+                    Tested index.html at 200% zoom.
+                    Navigation remained accessible, cards adjusted,
+                    and content was readable. Passed.
+                    </td>
+                </tr>
+                </tbody>
+
                 </table>
                 <p>Add two more rows.</p>
             </section>
+
             <section>
-                <h2>5. Screenshots</h2>
-                <p>[Insert two or three labeled screenshots. Connect each screenshot to a requirement, test, or repair.]</p>
+            <h2>5. Screenshots</h2>
+
+            <figure>
+                <img src="table-320-test.png"
+                    alt="Heat illness table tested at 320 CSS pixels."
+                    class="evidence-screenshot">
+                <figcaption>
+                Screenshot 1: Heat Safety table at 320px.
+                Demonstrates contained horizontal scrolling
+                without page-level overflow (Finding 2).
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="homepage-200-zoom.png"
+                    alt="Phoenix Heat Safety homepage at 200 percent zoom."
+                    class="evidence-screenshot">
+                <figcaption>
+                Screenshot 2: Homepage at 200% zoom.
+                Shows responsive navigation and cards
+                remaining readable (Finding 3).
+                </figcaption>
+            </figure>
             </section>
+
             <section>
                 <h2>6. Sources, Assets, and AI</h2>
-                <p><strong>MDN/official sources:</strong> [Concise list with links]</p>
-                <p><strong>Assets and licenses:</strong> [Asset, creator, source, license/permission, and modification]</p>
-                <p><strong>AI disclosure:</strong> [State “No generative AI was used,” or document the tool, purpose, meaningful assistance, verification, and final decision.]</p>
+
+                <p>
+                <strong>MDN/official sources:</strong>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">
+                    MDN HTML Tables
+                </a>,
+                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation">
+                    MDN Form Validation
+                </a>,
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path">
+                    MDN clip-path
+                </a>,
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">
+                    MDN Reduced Motion
+                </a>,
+                <a href="https://www.cdc.gov/heat-health/">
+                    CDC Heat and Health
+                </a>.
+                </p>
+
+                <p>
+                <strong>Assets and licenses:</strong>
+                The heat-resources.svg graphic was created for this
+                educational project with AI-assisted SVG code.
+                The heat safety figure uses HTML and CSS.
+                Testing screenshots were captured from the project.
+                No third-party images were used.
+                </p>
+
+                <p>
+                <strong>AI-assisted with disclosure:</strong>
+                ChatGPT helped identify possible gaps, suggest debugging
+                hypotheses, and propose small HTML, CSS, SVG, and JavaScript
+                solutions. I made the integration decisions, tested the
+                website in Chrome and Edge, and recorded my own observations.
+                I verified the accepted changes and remain responsible
+                for the final code and testing evidence.
+                </p>
+
+
             </section>
         </main>
     </body>

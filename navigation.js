@@ -3,7 +3,9 @@ const requestForm = document.querySelector("#request-form");
 const formStatus = document.querySelector("#form-status");
 
 if (requestForm && formStatus) {
-  requestForm.addEventListener("submit", function (event) {
+    requestForm.action = "";
+    document.querySelector("#review-button").disabled = false; 
+    requestForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     if (!requestForm.reportValidity()) {
