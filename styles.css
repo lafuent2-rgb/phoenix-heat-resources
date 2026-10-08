@@ -277,3 +277,53 @@ figcaption {
   max-width: 100%;
   height: auto;
 }
+
+/* Positioned heat safety badge */
+.hero {
+  position: relative;
+  padding-top: 4rem;
+}
+
+.hero-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background: var(--color-accent);
+  color: #191919;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+
+/* Decorative hero shape */
+.hero::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: var(--color-accent);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  margin-top: var(--space-2);
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
