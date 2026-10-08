@@ -1,0 +1,201 @@
+
+:root {
+  --color-primary: #8c1d40;
+  --color-accent: #ffc627;
+  --color-text: #404040;
+  --color-background: #ffffff;
+  --color-surface: #f5f5f5;
+  --color-border: #d0d0d0;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --radius: 0.5rem;
+  --measure: 70ch;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1, h2, h3 {
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+p {
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Header and navigation */
+.site-header {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--space-3);
+}
+
+.site-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 var(--space-2);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  display: inline-block;
+  color: white;
+  padding: var(--space-1);
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+  background: var(--color-accent);
+  color: #191919;
+}
+
+.site-header a:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Main content and footer */
+main {
+  width: min(100% - 2rem, 70rem);
+  margin: 0 auto;
+  padding-block: var(--space-4);
+}
+
+.site-footer {
+  border-top: 2px solid var(--color-border);
+  padding: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.site-footer p {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Homepage hero */
+.hero {
+  background: var(--color-surface);
+  border-left: 5px solid var(--color-accent);
+  padding: var(--space-3);
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+}
+
+/* Responsive card layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  font-weight: bold;
+}
+
+/* Form layout */
+#request-form {
+  max-width: 38rem;
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.form-field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.form-field label,
+legend {
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+fieldset label {
+  display: block;
+  margin-top: var(--space-1);
+}
+
+button {
+  padding: var(--space-2);
+  background: var(--color-primary);
+  color: white;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background: #651530;
+}
+
+#form-status {
+  font-weight: bold;
+}
