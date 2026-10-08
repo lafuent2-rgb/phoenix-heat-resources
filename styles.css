@@ -199,3 +199,81 @@ button:hover {
 #form-status {
   font-weight: bold;
 }
+
+/* Responsive data table */
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: var(--space-2);
+}
+
+th,
+td {
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Heat safety figure */
+.safety-figure {
+  margin: var(--space-3) 0;
+}
+
+.safety-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: var(--space-2);
+}
+
+.safety-step {
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.step-number {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #191919;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50%;
+}
+
+.safety-step h3 {
+  margin-bottom: var(--space-1);
+}
+
+figcaption {
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Resource SVG */
+.resource-figure {
+  margin: var(--space-3) 0;
+}
+
+.resource-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
