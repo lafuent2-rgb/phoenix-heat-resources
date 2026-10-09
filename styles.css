@@ -110,12 +110,15 @@ main {
 
 /* Homepage hero */
 .hero {
+  position: relative;
   background: var(--color-surface);
   border-left: 5px solid var(--color-accent);
   padding: var(--space-3);
+  padding-top: 4rem;
   border-radius: var(--radius);
   margin-bottom: var(--space-4);
 }
+
 
 /* Responsive card layout */
 .card-grid {
@@ -130,6 +133,7 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-3);
+  transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
 .card h3 {
@@ -278,12 +282,6 @@ figcaption {
   height: auto;
 }
 
-/* Positioned heat safety badge */
-.hero {
-  position: relative;
-  padding-top: 4rem;
-}
-
 .hero-badge {
   position: absolute;
   top: 1rem;
@@ -307,10 +305,6 @@ figcaption {
   margin-top: var(--space-2);
 }
 
-/* Card hover effect */
-.card {
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
 
 .card:hover {
   transform: translateY(-4px);
