@@ -8,7 +8,6 @@
     <body>
         <header>
             <h1>GIT 337 Final Capstone Evidence</h1>
-            <p>Replace every bracketed prompt. Keep this concise and export it as one PDF for Canvas.</p>
         </header>
         <main>
             <section>
@@ -132,51 +131,44 @@
                     </tbody>
 
                 </table>
-                <p>Add enough rows to locate semantic structure, the design system, figure, table, form, SVG, navigation/layout, positioning/layering, shape, effect/motion, testing, and documentation.</p>
             </section>
             <section>
                 <h2>3. Focused Release Check</h2>
 
                 <ul>
-
                 <li>
-                HTML and CSS validation: Passed. All five HTML files
-                were checked using the W3C HTML Validator, and both
-                CSS files passed the W3C CSS Validator.
-                </li>
-
-
-                <li>
-                Published links and assets: GitHub Pages is published.
-                All four pages are accessible through the website
-                navigation. The SVG, CSS, and JavaScript assets
-                were checked locally.
-                </li>
-
-                <li>
-                    320 CSS pixels and 200% zoom: Passed. Content remained
-                    readable, navigation worked, and no page-level
-                    horizontal overflow was observed.
+                    HTML and CSS validation: Passed. All five HTML files
+                    and both CSS files were checked using W3C validators.
                 </li>
                 <li>
-                    Keyboard and visible focus: Passed. Navigation links
-                    and form controls were accessible using the keyboard.
-                    Focus indicators remained visible.
+                    Published links and assets: Passed. The four-page
+                    GitHub Pages website, navigation, SVG, and form
+                    were checked in Chrome and Edge.
                 </li>
                 <li>
-                    Form labels, constraints, errors, and recovery:
-                    Passed. Required fields and email validation worked,
-                    and valid submissions displayed demonstration feedback.
+                    Responsive layout: Passed at 320px, 768px, 1280px,
+                    and 200% browser zoom. No page-level horizontal
+                    overflow was observed.
                 </li>
                 <li>
-                    Reduced motion and JavaScript unavailable: Passed
-                    after repair. Card movement was removed under reduced
-                    motion. Without JavaScript, a notice appeared and
-                    the Review Request button was disabled.
+                    Keyboard and focus: Passed. Skip links, navigation,
+                    form controls, and keyboard scrolling within the
+                    Heat Safety table were tested.
                 </li>
                 <li>
-                    Two current browsers: Passed in Google Chrome and
-                    Microsoft Edge. All four pages were checked.
+                    Form validation and recovery: Passed. Required fields
+                    and email validation worked. Outdated confirmation
+                    feedback was repaired and successfully retested.
+                </li>
+                <li>
+                    Reduced motion and JavaScript unavailable: Passed.
+                    Card movement was removed under reduced motion.
+                    Without JavaScript, the form notice appeared and
+                    the Review Request button remained disabled.
+                </li>
+                <li>
+                    Two current browsers: Passed in Google Chrome
+                    and Microsoft Edge.
                 </li>
                 </ul>
 
@@ -214,74 +206,83 @@
                     Re-enabled JavaScript and refreshed. The button worked
                     and displayed the demonstration confirmation. Passed.
                     </td>
-                </tr>
+                </tr>  
                 <tr>
-                    <td>
-                    Finding 2: At 320 CSS pixels, the three-column
-                    heat illness table required horizontal scrolling.
-                    </td>
-                    <td>
-                    Narrow-screen users must scroll within the table
-                    to read all columns.
-                    </td>
-                    <td>
-                    No repair required. The existing table-wrapper
-                    provides contained horizontal scrolling.
-                    </td>
-                    <td>
-                    Tested heat-safety.html again at 320px.
-                    All columns were accessible within the table,
-                    with no page-level horizontal overflow. Passed.
-                    </td>
+                <td>
+                    Finding 2: After reviewing a valid form, deleting
+                    the required email address left the previous
+                    confirmation message visible.
+                </td>
+                <td>
+                    Users could mistake outdated confirmation feedback
+                    for a review of their current form information.
+                </td>
+                <td>
+                    Added input and change event listeners in
+                    navigation.js to clear the previous confirmation
+                    whenever the form information changes.
+                </td>
+                <td>
+                    Submitted a valid form, then deleted the email
+                    address. The confirmation disappeared immediately.
+                    After correcting the email and reviewing again,
+                    the confirmation reappeared. Passed.
+                </td>
                 </tr>
+
+               
                 <tr>
-                    <td>
-                    Finding 3: At 200% browser zoom, the homepage
-                    navigation and cards needed to adapt to reduced
-                    available space.
-                    </td>
-                    <td>
-                    Increased zoom can reduce the space available
-                    for navigation and content.
-                    </td>
-                    <td>
-                    No repair required. The existing flexible
-                    navigation and responsive card grid were sufficient.
-                    </td>
-                    <td>
-                    Tested index.html at 200% zoom.
-                    Navigation remained accessible, cards adjusted,
-                    and content was readable. Passed.
-                    </td>
+                <td>
+                    Finding 3: At 320 CSS pixels, the heat illness
+                    table required horizontal scrolling, but there
+                    were no instructions explaining how to access
+                    the additional columns.
+                </td>
+                <td>
+                    Visitors might not realize that more information
+                    was available. Keyboard users also needed a
+                    reliable way to reach the hidden columns.
+                </td>
+                <td>
+                    Added visible scrolling instructions and made
+                    the table container keyboard-focusable with
+                    tabindex="0". Added an accessible name and
+                    description for the scrollable region.
+                </td>
+                <td>
+                    Retested heat-safety.html at 320px. The instructions
+                    were visible, the table received keyboard focus,
+                    and the Left and Right arrow keys scrolled through
+                    the columns without page-level horizontal overflow.
+                    Passed.
+                </td>
                 </tr>
                 </tbody>
-
                 </table>
-                <p>Add two more rows.</p>
             </section>
-
+           
             <section>
             <h2>5. Screenshots</h2>
 
             <figure>
-                <img src="table-320-test.png"
-                    alt="Heat illness table tested at 320 CSS pixels."
+                <img src="table-final-320.png"
+                    alt="Heat illness table with scrolling instructions at 320px."
                     class="evidence-screenshot">
                 <figcaption>
                 Screenshot 1: Heat Safety table at 320px.
-                Demonstrates contained horizontal scrolling
-                without page-level overflow (Finding 2).
+                Shows the scrolling instructions added for
+                Finding 3 and the responsive table layout.
                 </figcaption>
             </figure>
 
             <figure>
-                <img src="homepage-200-zoom.png"
-                    alt="Phoenix Heat Safety homepage at 200 percent zoom."
+                <img src="Reduced-Motion.png"
+                    alt="Homepage at 320px with reduced-motion emulation enabled."
                     class="evidence-screenshot">
                 <figcaption>
-                Screenshot 2: Homepage at 200% zoom.
-                Shows responsive navigation and cards
-                remaining readable (Finding 3).
+                Screenshot 2: Homepage at 320px with
+                prefers-reduced-motion set to reduce.
+                Documents responsive layout and reduced-motion testing.
                 </figcaption>
             </figure>
             </section>
